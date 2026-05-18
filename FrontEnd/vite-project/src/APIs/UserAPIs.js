@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const UserBaseURL = 'http://localhost:3000/user';
-const UseBaseURL = 'http://localhost:3000/use';
+const UserBaseURL = `${import.meta.env.VITE_API_URL}/user`;
+const UseBaseURL = `${import.meta.env.VITE_API_URL}/use`;
 
 export const getStoreDataForUSerAPI = async (userId) => {
     try{

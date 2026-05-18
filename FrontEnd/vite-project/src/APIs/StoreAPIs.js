@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const BaseURL = 'http://localhost:3000/store';
+const BaseURL = `${import.meta.env.VITE_API_URL}/store`;
 
 export const GetStoreRatingTableApi = async (storeId) => {
     try{

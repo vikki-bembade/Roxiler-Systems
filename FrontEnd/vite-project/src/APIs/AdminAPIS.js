@@ -1,7 +1,7 @@
 import axios from "axios";
 
 
-const BaseURL = 'http://localhost:3000/admin';
+const BaseURL = `${import.meta.env.VITE_API_URL}/admin`;
 
 export const AddNewStoreApi = async (storeData) => {
     console.log(storeData , localStorage.getItem('token'));
