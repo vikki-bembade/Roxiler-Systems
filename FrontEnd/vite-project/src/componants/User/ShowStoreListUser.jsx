@@ -1,8 +1,8 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
-import { getStoreDataForUSerAPI } from '../../APIs/UserAPIS.js';
+import { getStoreDataForUSerAPI } from '../../APIs/UserAPIs.js';
 import { jwtDecode } from 'jwt-decode';
-import { addRatingApi } from '../../APIs/UserAPIS.js';
+import { addRatingApi } from '../../APIs/UserAPIs.js';
 
 const ShowStoreListUser = () => {
   const [stores, setStores] = useState([]);
