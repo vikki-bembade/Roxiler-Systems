@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "FrontEnd/vite-project/package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    },
+    {
+      "src": "BackEnd/index.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/BackEnd/$1" },
+    { "handle": "filesystem" },
+    { "src": "/(.*)", "dest": "/FrontEnd/vite-project/dist/index.html" }
+  ]
+}
